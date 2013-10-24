@@ -3,6 +3,7 @@ require "language_pack/rails4"
 
 class LanguagePack::Backup < LanguagePack::Rails4
   def self.use?
+  	puts "Environment BACKUP: #{ENV["BACKUP"]}"
     ENV["BACKUP"]
   end
 

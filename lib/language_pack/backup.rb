@@ -21,13 +21,13 @@ class LanguagePack::Backup < LanguagePack::Rails4
 
   def install_backup_gem
   	topic "Installing Backup Gem"
-  	run_stdout "gem install backup"
+  	run "gem install backup"
   end
 
   def install_postgresql_client
   	topic "Installing Posgtgresql Client 9.3"
-  	run_stdout "wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -"
-	run_stdout "sudo apt-get update"
-	run_stdout "sudo apt-get install postgresql-client-9.3"
+  	run "wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -"
+	run "sudo apt-get update"
+	run "sudo apt-get install postgresql-client-9.3"
   end
 end

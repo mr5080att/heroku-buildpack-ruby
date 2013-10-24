@@ -1,5 +1,5 @@
 require "language_pack"
-require "language_pack/base"
+require "language_pack/rails4"
 
 class LanguagePack::Backup < LanguagePack::Rails4
   def self.use?

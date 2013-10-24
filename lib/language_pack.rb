@@ -9,12 +9,10 @@ module LanguagePack
   def self.detect(*args)
     Dir.chdir(args.first)
 
-    pack = [ PostgresqlCommonClient, NoLockfile, Rails4, Rails3, Rails2, Rack, Ruby ].detect do |klass|
-      puts "Language Pack: #{klass}"
+    pack = [ NoLockfile, Backup, Rails4, Rails3, Rails2, Rack, Ruby ].detect do |klass|
       klass.use?
     end
 
-    puts "Language Pack: #{pack.inspect}"
     pack ? pack.new(*args) : nil
   end
 
@@ -27,4 +25,4 @@ require "language_pack/rails3"
 require "language_pack/disable_deploys"
 require "language_pack/rails4"
 require "language_pack/no_lockfile"
-require "language_pack/postgresql_common_client"
+require "language_pack/backup"

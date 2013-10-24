@@ -13,6 +13,7 @@ module LanguagePack
       klass.use?
     end
 
+    puts "Language Pack: #{pack.inspect}"
     pack ? pack.new(*args) : nil
   end
 

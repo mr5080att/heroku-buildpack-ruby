@@ -513,6 +513,7 @@ require 'cgi'
 require 'uri'
 
 begin
+  puts "DATABASE_URL: #{ENV["DATABASE_URL"]}"
   uri = URI.parse(ENV["DATABASE_URL"])
 rescue URI::InvalidURIError
   raise "Invalid DATABASE_URL"

@@ -12,8 +12,8 @@ class LanguagePack::PostgresqlCommonClient < LanguagePack::Base
 
   def compile
     puts "Installing Postgresql Common Client 9.3"
-    puts %x[wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -]
-	puts %x[sudo apt-get update]
-	puts %x[sudo apt-get install postgresql-client-9.3]
+    puts %x[wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -]
+	puts %x[apt-get update]
+	puts %x[apt-get install postgresql-client-9.3]
   end
 end

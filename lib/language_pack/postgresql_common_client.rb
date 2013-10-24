@@ -3,7 +3,7 @@ require "language_pack/base"
 
 class LanguagePack::PostgresqlCommonClient < LanguagePack::Base
   def self.use?
-    File.exist?("Gemfile")
+    true
   end
 
   def name

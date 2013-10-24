@@ -62,7 +62,4 @@ fi
 RUBY_PACKAGE=ruby-${MINOR_RUBY_VERSION}.tgz
 echo "Creating ${RUBY_PACKAGE}..."
 tar czf $RUBY_PACKAGE -C $DESTINATION .
-wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install postgresql-client-9.3
 echo "done"

@@ -31,7 +31,4 @@ class LanguagePack::Backup < LanguagePack::Rails4
     topic "Installing Backup Gem"
     puts %x[gem install backup]
   end
-
-  def create_database_yml
-  end
 end
